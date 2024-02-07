@@ -5,31 +5,6 @@
         static void Main(string[] args)
         {
 
-            ConsoleKeyInfo Tecla;
-            do
-            {
-                Console.Clear();
-                ShowOptions();
-                Tecla = Console.ReadKey();
-                Console.Clear();
-                switch (Tecla.Key)
-                {
-                    case ConsoleKey.D1: DoLeap(); break;
-                    case ConsoleKey.D2: DoOddOrEven(); break;
-                    case ConsoleKey.D3: DoTry2ReadValidTimeStamp(); break;
-                    case ConsoleKey.D4: DoReadAValidTimeStamp(); break;
-                    case ConsoleKey.D5: DoEnterValidDate(); break;
-                    case ConsoleKey.D6: DoTry2EnterValidDate(); break;
-                    case ConsoleKey.D7: DoMCD(); break;
-                    case ConsoleKey.D8: DoGenerateHulukuluBulukulu(); break;
-                    case ConsoleKey.D9: DoSumOfDigits(); break;
-                
-                    default:
-                        MsgNextScreen("Error.Prem una tecla per tornar al menu..."); break;
-                }
-
-            }
-            while (Tecla.Key != ConsoleKey.D0);
         }
         private static void ShowOptions()
         {
