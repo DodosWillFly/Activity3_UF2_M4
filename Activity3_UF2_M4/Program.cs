@@ -20,6 +20,6 @@
             Console.WriteLine("A. AverageOfDataFile");
             Console.WriteLine("0. Exit");
         }
-
     }
 }
+        
