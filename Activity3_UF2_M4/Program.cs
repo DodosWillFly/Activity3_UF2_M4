@@ -1,3 +1,5 @@
+using System.Runtime.Intrinsics.X86;
+
 namespace Activity3_UF2_M4
 {
     internal class Program
@@ -8,11 +10,11 @@ namespace Activity3_UF2_M4
             do
             {
 
-                Console.Clear();
+                Console.Clear(); // Limpia la consola. Esto se hace al inicio de cada iteración para asegurar que solo se muestre el menú actual.
                 ShowOptions();
-                Tecla = Console.ReadKey();
+                Tecla = Console.ReadKey(); //Declara una variable Tecla de tipo ConsoleKeyInfo, que se utiliza para almacenar la tecla que el usuario presiona.
                 Console.Clear();
-                switch (Tecla.Key)
+                switch (Tecla.Key) // Este es un bloque switch que realiza diferentes acciones dependiendo de la tecla que el usuario presionó
                 {
                     case ConsoleKey.D1: CuestionariFacebook(); break; 
                     case ConsoleKey.D2: CuestionariGoogle(); break;
@@ -22,11 +24,17 @@ namespace Activity3_UF2_M4
                         MsgNextScreen("Error.Prem una tecla per tornar al menu..."); break;
                 }
             }
-            while (Tecla.Key != ConsoleKey.D0);
+            while (Tecla.Key != ConsoleKey.D0); //este es un bucle do -while que se ejecuta hasta que el usuario presiona la tecla ‘0’.
         }
+        /// <summary>
+        /// Aquest mètode mostra un missatge a l'usuari i després fa una pausa en l'execució del programa fins que l'usuari prem una tecla.
+        /// </summary>
+        /// <param name="message">El missatge que es mostrarà a l'usuari.</param>
         public static void MsgNextScreen(string message)
         {
+            // Mostra el missatge a l'usuari
             Console.WriteLine(message);
+            // Espera que l'usuari premi una tecla per continuar
             Console.ReadKey();
         }
         /// <summary>
@@ -43,7 +51,7 @@ namespace Activity3_UF2_M4
         ///  Cuestionari de Facebook
         /// </summary>
         public static void CuestionariFacebook()
-        {
+        { // mostra el quiestionari
             Console.WriteLine("Cuestionari de Facebook");
             // Pregunta 1
             Console.WriteLine("1. Quina empresa va fundar Mark Zuckerberg?");
@@ -51,6 +59,7 @@ namespace Activity3_UF2_M4
             Console.WriteLine("   b) Facebook");
             Console.WriteLine("   c) Amazon");
             Console.WriteLine("   d) Apple");
+            // Declara una variable per emmagatzemar la resposta de l'usuari
 
             Console.Write("Introdueix la teva elecció (a/b/c/d): ");
             string respostaUsuari1;
@@ -70,7 +79,10 @@ namespace Activity3_UF2_M4
             Console.WriteLine("   b) Jeff Bezos");
             Console.WriteLine("   c) Sundar Pichai");
             Console.WriteLine("   d) Tim Cook");
+            // Declara una variable per emmagatzemar la resposta de l'usuari
+
             Console.Write("Introdueix la teva elecció (a/b/c/d): ");
+
             string respostaUsuari2;
             respostaUsuari2 = Console.ReadLine();
             if (respostaUsuari2 == "a")
@@ -88,6 +100,8 @@ namespace Activity3_UF2_M4
             Console.WriteLine("   b) Compartir");
             Console.WriteLine("   c) Comentar");
             Console.WriteLine("   d) Reaccionar");
+            // Declara una variable per emmagatzemar la resposta de l'usuari
+
             Console.Write("Introdueix la teva elecció (a/b/c/d): ");
             string respostaUsuari3;
             respostaUsuari3 = Convert.ToString(Console.ReadLine());
@@ -105,6 +119,8 @@ namespace Activity3_UF2_M4
             Console.WriteLine("   b) Històries");
             Console.WriteLine("   c) Grups");
             Console.WriteLine("   d) Pàgines");
+            // Declara una variable per emmagatzemar la resposta de l'usuari
+
             Console.Write("Introdueix la teva elecció (a/b/c/d): ");
             string respostaUsuari4;
             respostaUsuari4 = Convert.ToString(Console.ReadLine());
@@ -114,6 +130,7 @@ namespace Activity3_UF2_M4
             }
             else
             {
+                // Si la resposta és incorrecta, mostra un missatge d'error
                 Console.WriteLine("Fals");
             }
             // Pregunta 5
@@ -131,6 +148,7 @@ namespace Activity3_UF2_M4
             }
             else
             {
+                // Si la resposta és incorrecta, mostra un missatge d'error
                 Console.WriteLine("Fals");
             }
         }
@@ -147,15 +165,19 @@ namespace Activity3_UF2_M4
             Console.WriteLine("   b) Yahoo");
             Console.WriteLine("   c) Google");
             Console.WriteLine("   d) DuckDuckGo");
+            // Declara una variable per emmagatzemar la resposta de l'usuari
+
             Console.Write("Introdueix la teva elecció (a/b/c/d): ");
             string respostaUsuari1;
             respostaUsuari1 = Convert.ToString(Console.ReadLine());
             if (respostaUsuari1 == "c")
             {
+                // Si la resposta és correcta, mostra un missatge de confirmació
                 Console.WriteLine("Correcte");
             }
             else
             {
+                // Si la resposta és incorrecta, mostra un missatge d'error
                 Console.WriteLine("Fals");
             }
 
@@ -165,15 +187,21 @@ namespace Activity3_UF2_M4
             Console.WriteLine("   b) Apple");
             Console.WriteLine("   c) Google");
             Console.WriteLine("   d) Samsung");
+            // Declara una variable per emmagatzemar la resposta de l'usuari
+
             Console.Write("Introdueix la teva elecció (a/b/c/d): ");
             string respostaUsuari2;
             respostaUsuari2 = Convert.ToString(Console.ReadLine());
             if (respostaUsuari2 == "c")
             {
+                // Si la resposta és correcta, mostra un missatge de confirmació
+
                 Console.WriteLine("Correcte");
             }
             else
             {
+                // Si la resposta és incorrecta, mostra un missatge d'error
+
                 Console.WriteLine("Fals");
             }
 
@@ -183,15 +211,21 @@ namespace Activity3_UF2_M4
             Console.WriteLine("   b) Safari");
             Console.WriteLine("   c) Chrome");
             Console.WriteLine("   d) Edge");
+            // Declara una variable per emmagatzemar la resposta de l'usuari
+
             Console.Write("Introdueix la teva elecció (a/b/c/d): ");
             string respostaUsuari3;
             respostaUsuari3 = Convert.ToString(Console.ReadLine());
             if (respostaUsuari3 == "c")
             {
+                // Si la resposta és correcta, mostra un missatge de confirmació
+
                 Console.WriteLine("Correcte");
             }
             else
             {
+                // Si la resposta és incorrecta, mostra un missatge d'error
+
                 Console.WriteLine("Fals");
             }
             // Pregunta 4
@@ -200,15 +234,21 @@ namespace Activity3_UF2_M4
             Console.WriteLine("   b) Google Slides");
             Console.WriteLine("   c) Google Docs");
             Console.WriteLine("   d) Google Forms");
+            // Declara una variable per emmagatzemar la resposta de l'usuari
+
             Console.Write("Introdueix la teva elecció (a/b/c/d): ");
             string respostaUsuari4;
             respostaUsuari4 = Convert.ToString(Console.ReadLine());
             if (respostaUsuari4 == "c")
             {
+                // Si la resposta és correcta, mostra un missatge de confirmació
+
                 Console.WriteLine("Correcte");
             }
             else
             {
+                // Si la resposta és incorrecta, mostra un missatge d'error
+
                 Console.WriteLine("Fals");
             }
             // Pregunta 5
@@ -217,15 +257,21 @@ namespace Activity3_UF2_M4
             Console.WriteLine("   b) Google Photos");
             Console.WriteLine("   c) Microsoft Word");
             Console.WriteLine("   d) Google Translate");
+            // Declara una variable per emmagatzemar la resposta de l'usuari
+
             Console.Write("Introdueix la teva elecció (a/b/c/d): ");
             string respostaUsuari5;
             respostaUsuari5 = Convert.ToString(Console.ReadLine());
             if (respostaUsuari5 == "c")
             {
+                // Si la resposta és correcta, mostra un missatge de confirmació
+
                 Console.WriteLine("Correcte");
             }
             else
             {
+                // Si la resposta és incorrecta, mostra un missatge d'error
+
                 Console.WriteLine("Fals");
             }
         }
@@ -233,7 +279,7 @@ namespace Activity3_UF2_M4
         ///  Cuestionari de ElonMusk
         /// </summary>
         public static void CuestionariElonMusk()
-        {
+        {// mostra el quiestionari
             Console.WriteLine("Cuestionari d'Elon Musk");
             // Pregunta 1
             Console.WriteLine("1. Quina empresa està relacionada amb Elon Musk?");
@@ -241,15 +287,21 @@ namespace Activity3_UF2_M4
             Console.WriteLine("   b) SpaceX");
             Console.WriteLine("   c) Amazon");
             Console.WriteLine("   d) Microsoft");
+            // Declara una variable per emmagatzemar la resposta de l'usuari
+
             Console.Write("Introdueix la teva elecció (a/b/c/d): ");
             string respostaUsuari1;
             respostaUsuari1 = Convert.ToString(Console.ReadLine());
             if (respostaUsuari1 == "b")
             {
+                // Si la resposta és correcta, mostra un missatge de confirmació
+
                 Console.WriteLine("Correcte");
             }
             else
             {
+                // Si la resposta és incorrecta, mostra un missatge d'error
+
                 Console.WriteLine("Fals");
             }
             // Pregunta 2
@@ -263,6 +315,8 @@ namespace Activity3_UF2_M4
             respostaUsuari2 = Convert.ToString(Console.ReadLine());
             if (respostaUsuari2 == "b")
             {
+                // Si la resposta és correcta, mostra un missatge de confirmació
+
                 Console.WriteLine("Correcte");
             }
             else
@@ -276,15 +330,21 @@ namespace Activity3_UF2_M4
             Console.WriteLine("   b) Model X");
             Console.WriteLine("   c) Model 3");
             Console.WriteLine("   d) Model Y");
+            // Declara una variable per emmagatzemar la resposta de l'usuari
+
             Console.Write("Introdueix la teva elecció (a/b/c/d): ");
             string respostaUsuari3;
             respostaUsuari3 = Convert.ToString(Console.ReadLine());
             if (respostaUsuari3 == "a")
             {
+                // Si la resposta és correcta, mostra un missatge de confirmació
+
                 Console.WriteLine("Correcte");
             }
             else
             {
+                // Si la resposta és incorrecta, mostra un missatge d'error
+
                 Console.WriteLine("Fals");
             }
             // Pregunta 4
@@ -293,11 +353,16 @@ namespace Activity3_UF2_M4
             Console.WriteLine("   b) Neuralink");
             Console.WriteLine("   c) SolarCity");
             Console.WriteLine("   d) Hyperloop");
+            // Declara una variable per emmagatzemar la resposta de l'usuari
+
             Console.Write("Introdueix la teva elecció (a/b/c/d): ");
+
             string respostaUsuari4;
             respostaUsuari4 = Convert.ToString(Console.ReadLine());
             if (respostaUsuari4 == "a")
             {
+                // Si la resposta és correcta, mostra un missatge de confirmació
+
                 Console.WriteLine("Correcte");
             }
             else
@@ -305,20 +370,27 @@ namespace Activity3_UF2_M4
                 Console.WriteLine("Fals");
             }
             // Pregunta 5
+            // la ultima pregunta 
             Console.WriteLine("5. Quina de les següents opcions NO està relacionada amb Elon Musk?");
             Console.WriteLine("   a) PayPal");
             Console.WriteLine("   b) SolarCity");
             Console.WriteLine("   c) Neuralink");
             Console.WriteLine("   d) Blue Origin");
+            // Declara una variable per emmagatzemar la resposta de l'usuari
+
             Console.Write("Introdueix la teva elecció (a/b/c/d): ");
             string respostaUsuari5;
             respostaUsuari5 = Console.ReadLine();
             if (respostaUsuari3 == "d")
             {
+                // Si la resposta és correcta, mostra un missatge de confirmació
+
                 Console.WriteLine("Correcte");
             }
             else
             {
+                // Si la resposta és incorrecta, mostra un missatge d'error
+
                 Console.WriteLine("Fals");
             }
         }
