@@ -29,7 +29,9 @@
             Console.WriteLine(message);
             Console.ReadKey();
         }
-
+        /// <summary>
+        /// This function is to show the options of the program
+        /// </summary>
         public static void ShowOptions()
         {
             Console.WriteLine("1. Facebook");
