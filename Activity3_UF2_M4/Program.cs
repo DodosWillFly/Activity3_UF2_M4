@@ -7,6 +7,7 @@
             ConsoleKeyInfo Tecla;
             do
             {
+
                 Console.Clear();
                 ShowOptions();
                 Tecla = Console.ReadKey();
