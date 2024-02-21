@@ -1,4 +1,4 @@
-﻿namespace Activity3_UF2_M4
+namespace Activity3_UF2_M4
 {
     internal class Program
     {
