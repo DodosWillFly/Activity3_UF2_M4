@@ -218,10 +218,6 @@ private static void ShowOptions()
                 }
             }
 
-
-
-
-
         }
 
         public static void OnePiece()
