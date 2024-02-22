@@ -1,5 +1,5 @@
 using System.Linq.Expressions;
-using System.Runtime.Intrinsics.X86
+using System.Runtime.Intrinsics.X86;
 
 namespace Activity3_UF2_M4
 {
@@ -525,20 +525,7 @@ namespace Activity3_UF2_M4
                     answer5 = Console.ReadLine();
                 }
 
-                Console.Clear(); // Limpia la consola. Esto se hace al inicio de cada iteración para asegurar que solo se muestre el menú actual.
-                Tecla = Console.ReadKey(); //Declara una variable Tecla de tipo ConsoleKeyInfo, que se utiliza para almacenar la tecla que el usuario presiona.
-                Console.Clear();
-                switch (Tecla.Key) // Este es un bloque switch que realiza diferentes acciones dependiendo de la tecla que el usuario presionó
-                {
-                    case ConsoleKey.D1: CuestionariFacebook(); break; 
-                    case ConsoleKey.D2: CuestionariGoogle(); break;
-                    case ConsoleKey.D3: CuestionariElonMusk(); ; break;
-
-                    default:
-                        MsgNextScreen("Error.Prem una tecla per tornar al menu..."); break;
-                }
             }
-            while (Tecla.Key != ConsoleKey.D0); //este es un bucle do -while que se ejecuta hasta que el usuario presiona la tecla ‘0’.
         }
         /// <summary>
         /// Aquest mètode mostra un missatge a l'usuari i després fa una pausa en l'execució del programa fins que l'usuari prem una tecla.
@@ -1179,4 +1166,4 @@ namespace Activity3_UF2_M4
     }
 
 }
-}
+
