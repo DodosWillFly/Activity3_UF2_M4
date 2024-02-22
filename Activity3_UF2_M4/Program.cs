@@ -27,10 +27,13 @@ namespace Activity3_UF2_M4
                     case ConsoleKey.D3:
                         break;
                     case ConsoleKey.D4:
+                        CuestionariNetworks();
                         break;
                     case ConsoleKey.D5:
+                        CuestionariComputers();
                         break;
                     case ConsoleKey.D6:
+                        CuestionariCyber();
                         break;
                     case ConsoleKey.D7:
                         Videogames();
@@ -52,9 +55,9 @@ namespace Activity3_UF2_M4
             Console.WriteLine("1. França");
             Console.WriteLine("2. C#");
             Console.WriteLine("3. KdGAJGFKJG");
-            Console.WriteLine("4. DoReadAValidTimeStamp");
-            Console.WriteLine("5. DoEnterValidDate");
-            Console.WriteLine("6. DoTry2EnterValidDate");
+            Console.WriteLine("4. CuestionariNetworks");
+            Console.WriteLine("5. CuestionariComputers");
+            Console.WriteLine("6. CuestionariCyber");
             Console.WriteLine("7. VideoGames");
             Console.WriteLine("8. OnePiece");
             Console.WriteLine("9. Videogames_2");
