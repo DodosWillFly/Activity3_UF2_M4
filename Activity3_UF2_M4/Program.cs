@@ -526,7 +526,6 @@ namespace Activity3_UF2_M4
                 }
 
                 Console.Clear(); // Limpia la consola. Esto se hace al inicio de cada iteración para asegurar que solo se muestre el menú actual.
-                ShowOptions();
                 Tecla = Console.ReadKey(); //Declara una variable Tecla de tipo ConsoleKeyInfo, que se utiliza para almacenar la tecla que el usuario presiona.
                 Console.Clear();
                 switch (Tecla.Key) // Este es un bloque switch que realiza diferentes acciones dependiendo de la tecla que el usuario presionó
@@ -555,13 +554,6 @@ namespace Activity3_UF2_M4
         /// <summary>
         /// This function is to show the options of the program
         /// </summary>
-        public static void ShowOptions()
-        {
-            Console.WriteLine("1. Facebook");
-            Console.WriteLine("2. Google");
-            Console.WriteLine("3. Elon Musk");
-            Console.WriteLine("0. Salir");
-        }
 
         public static void CuestionariFacebook()
         { // mostra el quiestionari
