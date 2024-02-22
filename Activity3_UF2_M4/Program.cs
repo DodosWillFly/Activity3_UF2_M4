@@ -2,6 +2,10 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// questionary main options
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             ConsoleKeyInfo Tecla;
