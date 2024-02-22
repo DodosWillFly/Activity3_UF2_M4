@@ -21,10 +21,13 @@ namespace Activity3_UF2_M4
                 switch (Tecla.Key)
                 {
                     case ConsoleKey.D1:
+                        CuestionariFacebook();
                         break;
                     case ConsoleKey.D2:
+                        CuestionariGoogle();
                         break;
                     case ConsoleKey.D3:
+                        CuestionariElonMusk();
                         break;
                     case ConsoleKey.D4:
                         CuestionariNetworks();
@@ -46,22 +49,22 @@ namespace Activity3_UF2_M4
                         break;
                 }
 
-            }
-            while (Tecla.Key != ConsoleKey.D0);
+    }
+    while (Tecla.Key != ConsoleKey.D0);
 
-        }
-        private static void ShowOptions()
-        {
-            Console.WriteLine("1. França");
-            Console.WriteLine("2. C#");
-            Console.WriteLine("3. KdGAJGFKJG");
-            Console.WriteLine("4. CuestionariNetworks");
-            Console.WriteLine("5. CuestionariComputers");
-            Console.WriteLine("6. CuestionariCyber");
-            Console.WriteLine("7. VideoGames");
-            Console.WriteLine("8. OnePiece");
-            Console.WriteLine("9. Videogames_2");
-            Console.WriteLine("0. Exit");
+}
+private static void ShowOptions()
+{
+    Console.WriteLine("1. CuestionariFacebook");
+    Console.WriteLine("2. CuestionariGoogle");
+    Console.WriteLine("3. CuestionariElonMusk");
+    Console.WriteLine("4. CuestionariNetworks");
+    Console.WriteLine("5. CuestionariComputers");
+    Console.WriteLine("6. CuestionariCyber");
+    Console.WriteLine("7. CuestionariVideoGames");
+    Console.WriteLine("8. CuestionariOnePiece");
+    Console.WriteLine("9. CuestionariVideogames_2");
+    Console.WriteLine("0. Exit");
         }
 
         public static void Videogames()
