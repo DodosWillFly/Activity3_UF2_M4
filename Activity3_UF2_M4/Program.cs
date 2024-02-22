@@ -1,4 +1,4 @@
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 using System.Runtime.Intrinsics.X86
 
 namespace Activity3_UF2_M4
@@ -555,7 +555,9 @@ namespace Activity3_UF2_M4
             Console.WriteLine("3. Elon Musk");
             Console.WriteLine("0. Salir");
         }
-
+        /// <summary>
+        ///  Cuestionari de Facebook
+        /// </summary>
         public static void CuestionariFacebook()
         { // mostra el quiestionari
             Console.WriteLine("Cuestionari de Facebook");
