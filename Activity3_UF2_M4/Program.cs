@@ -1,4 +1,6 @@
 using System.Linq.Expressions;
+using System.Runtime.Intrinsics.X86
+using System.Linq.Expressions;
 using System.Runtime.Intrinsics.X86;
 
 namespace Activity3_UF2_M4
@@ -539,6 +541,16 @@ private static void ShowOptions()
         }
         /// <summary>
         /// This function is to show the options of the program
+        /// </summary>
+        public static void ShowOptions()
+        {
+            Console.WriteLine("1. Facebook");
+            Console.WriteLine("2. Google");
+            Console.WriteLine("3. Elon Musk");
+            Console.WriteLine("0. Salir");
+        }
+        /// <summary>
+        ///  Cuestionari de Facebook
         /// </summary>
 
         public static void CuestionariFacebook()
