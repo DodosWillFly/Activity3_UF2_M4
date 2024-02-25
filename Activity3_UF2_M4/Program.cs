@@ -70,6 +70,7 @@ namespace Activity3_UF2_M4
             answer1 = Console.ReadLine();
             bool correctAnswer1 = false;
 
+            // Bucle que no se sale hasta repsonder correctamente la pregunta
             while (!correctAnswer1)
             {
 
