@@ -113,6 +113,7 @@ private static void ShowOptions()
             string answer2;
             answer2 = Console.ReadLine();
 
+            // Bucle que no se sale hasta repsonder correctamente la pregunta 
             while (!correctAnswer2)
             {
 
