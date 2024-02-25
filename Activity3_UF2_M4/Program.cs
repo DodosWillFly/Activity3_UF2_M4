@@ -101,6 +101,7 @@ namespace Activity3_UF2_M4
             string answer2;
             answer2 = Console.ReadLine();
 
+            // Bucle que no se sale hasta repsonder correctamente la pregunta 
             while (!correctAnswer2)
             {
 
